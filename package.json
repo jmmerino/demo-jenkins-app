@@ -1,0 +1,15 @@
+{
+  "name": "nodeapp",
+  "version": "0.0.1",
+  "description": "Example Nodejs app",
+  "main": "main.js",
+  "scripts": {
+    "test": "node test.js",
+    "testCore": "node test-core.js",
+    "testUnit": "node test-unit.js",
+    "start": "node main.js"
+  },   
+  "author": "jmmerino@gmail.com",  
+  "devDependencies": { "test": ">=0.6.0" }
+}
+
