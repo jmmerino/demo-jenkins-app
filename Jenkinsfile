@@ -23,8 +23,7 @@ node {
      * -> Usamos la variable de entorno de Jenkins "env.WORKSPACE" que es el directorio donde se ha clonado el proyecto. Para saber las variables de entorno disponibles en vuestro jenkins local (http://localhost:8080/job/dafsd/pipeline-syntax/globals)
      * -> Hacemos el build de docker con la función "docker.build". ESta función esta dissonible gracias al plugin de Docker (https://plugins.jenkins.io/docker-workflow). Podéis consultar la documentación del plugin pero es bastante farragosa (https://jenkins.io/doc/book/pipeline/docker/)
      */
-    stage('Build image') {
-        /* Build docker image and save it to app var */
+    stage('Build image') {        
         ansiColor('xterm') {
             dir("${env.WORKSPACE}") {
                 app = docker.build("demo-nodeapp")
@@ -54,7 +53,7 @@ node {
      * -> Guardamos el resultado de las ejecuciones en una variable y luego comprobamos si ha ido bien todo o ha fallado algo
      * -> Para controlar el fallo de la suite usamos los bloques try/catch
      */                                
-    stage('Test en paralelo') {        
+    /*stage('Test en paralelo') {        
         ansiColor('xterm') {
             app.inside("-u root:root") { 
 
@@ -103,6 +102,6 @@ node {
 
             }
         }
-    }
+    }*/
 
 }
