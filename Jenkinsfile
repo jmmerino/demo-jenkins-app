@@ -53,7 +53,7 @@ node {
      * -> Guardamos el resultado de las ejecuciones en una variable y luego comprobamos si ha ido bien todo o ha fallado algo
      * -> Para controlar el fallo de la suite usamos los bloques try/catch
      */                                
-    /*stage('Test en paralelo') {        
+    stage('Test en paralelo') {        
         ansiColor('xterm') {
             app.inside("-u root:root") { 
 
@@ -102,6 +102,6 @@ node {
 
             }
         }
-    }*/
+    }
 
 }
